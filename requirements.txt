@@ -1,0 +1,16 @@
+torch==2.4.1
+torchvision==0.19.0
+diffusers==0.29.2
+transformers==4.44.0
+accelerate==0.34.2
+peft==0.12.0
+safetensors==0.6.2
+lpips==0.1.4
+pandas==2.0.3
+pillow==10.0.0
+pyyaml==6.0
+tqdm==4.65.0
+xformers==0.0.27.post2
+scipy
+huggingface-hub>=0.23.0,<0.25.0
+bitsandbytes

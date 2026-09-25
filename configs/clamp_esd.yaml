@@ -1,0 +1,43 @@
+pretrained_model_name_or_path: /storage/projects/najib/condnum/trap-diffusion-outputs/models/ESD-merged-pipeline
+tokenizer_path: null
+text_encoder_path: null
+
+output_dir: output/clamp_esd
+seed: 42
+resolution: 512
+mixed_precision: bf16
+
+csv_file: /storage/projects/najib/condnum/trap-diffusion-outputs/dataset/generated_images_metadata.csv
+
+train_batch_size: 16
+num_train_epochs: 50
+gradient_accumulation_steps: 2
+learning_rate: 0.0002
+checkpointing_steps: 300
+
+rank: 8
+lora_alpha: 16
+
+validation_prompt: "A picture of a Kavri"
+num_validation_images: 5
+validation_epochs: 5
+
+inner_k_steps: 3
+inner_sgd_lr: 0.01
+use_projector: false
+
+low_memory: true
+
+lambda_plateau: 0.1
+lambda_contract: 1.0
+lambda_long: 1.0
+lambda_inverse: 1.0
+lambda_actual: 1.0
+lambda_estimated: 1.0
+
+kappa_min: 3.0
+kappa_max: 10.0
+c_target: 0.8
+
+adaptation_epochs: 50
+adaptation_learning_rate: 0.0001
